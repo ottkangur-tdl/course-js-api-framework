@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                script {
-                    build_docker_image()
-                }
-                echo "Build python-greetings"
+                build_docker_image()
             }
         }
         stage('deploy-dev') {
