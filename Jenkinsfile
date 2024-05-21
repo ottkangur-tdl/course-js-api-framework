@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                scripts {
+                script {
                     build_docker_image()
                 }
                 echo "Build python-greetings"
