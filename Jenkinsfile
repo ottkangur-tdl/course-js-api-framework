@@ -4,6 +4,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                scripts {
+                    build_docker_image()
+                }
                 echo "Build python-greetings"
             }
         }
@@ -13,4 +16,8 @@ pipeline {
             }
         }
     }
+}
+
+def build_docker_image(){
+    echo "Build python-greetings"
 }
