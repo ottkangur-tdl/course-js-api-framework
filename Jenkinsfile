@@ -7,16 +7,6 @@ pipeline {
                 build_docker_image()
             }
         }
-        stage('deploy-dev') {
-            steps {
-                deploy('DEV')
-            }
-        }
-        stage('api-test-dev') {
-            steps {
-                echo "Executing api tests against DEV env"
-            }
-        }
     }
 }
 
