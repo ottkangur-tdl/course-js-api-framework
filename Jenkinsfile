@@ -21,7 +21,8 @@ pipeline {
 }
 
 def build_docker_image(){
-    echo "Build python-greetings and building docker image"
+    echo "Building api-tests docker image for python-greetings"
     sh 'docker build --no-cache -t ottkangur/api-tests:latest .'
+    echo 'Pushing image to docker registry'
     sh 'docker push ottkangur/api-tests:latest'
 }
