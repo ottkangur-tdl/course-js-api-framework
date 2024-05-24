@@ -19,7 +19,7 @@ services:
   api-tests-prd:
     build: .
     image: api-tests
-    container_name: api-test-prd
+    container_name: api-test-prod
     volumes:
       - $PWD/new-reports/prd:/api-test-automation/mochawesome-report/
     network_mode: host
