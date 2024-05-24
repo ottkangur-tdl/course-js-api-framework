@@ -24,6 +24,3 @@ services:
       - $PWD/new-reports/prd:/api-test-automation/mochawesome-report/
     network_mode: host
     command: run greetings greetings_prod
-
-
-# docker run -v $PWD/test-reports:/api-test-automation/mochawesome-report/ --network=host --rm api-tests run BOOKS BOOKS_DEV
