@@ -5,7 +5,7 @@ services:
     image: api-tests
     container_name: api-test-dev
     volumes:
-      - $PWD/test-reports/dev:/api-test-automation/mochawesome-report/
+      - $PWD/new-reports/dev:/api-test-automation/mochawesome-report/
     network_mode: host
     command: run greetings greetings_dev
   api-tests-stg:
@@ -13,7 +13,7 @@ services:
     image: api-tests
     container_name: api-test-stg
     volumes:
-      - $PWD/test-reports/stg:/api-test-automation/mochawesome-report/
+      - $PWD/new-reports/stg:/api-test-automation/mochawesome-report/
     network_mode: host
     command: run greetings greetings_stg
   api-tests-prd:
@@ -21,9 +21,9 @@ services:
     image: api-tests
     container_name: api-test-prd
     volumes:
-      - $PWD/test-reports/prd:/api-test-automation/mochawesome-report/
+      - $PWD/new-reports/prd:/api-test-automation/mochawesome-report/
     network_mode: host
-    command: run greetings greetings_prd
+    command: run greetings greetings_prod
 
 
 # docker run -v $PWD/test-reports:/api-test-automation/mochawesome-report/ --network=host --rm api-tests run BOOKS BOOKS_DEV
